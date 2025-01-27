@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- left ui panel -->
+        <div class="r4">
+            <!-- options table -->
+            <div class="r12">
+                <table>
+                    <tr>
+                        <td>Steps</td>
+                        <td><input id="stepsInput" type="range" min="1" max="50" value="10" oninput="update()" /></td>
+                        <td><span id="stepsOutput" >10</span></td>
+                    </tr>
+                    <tr>
+                        <td>Inner Radius (%)</td>
+                        <td><input id="radiusInput" type="range" min="0" max="100" value="25" oninput="update()" /></td>
+                        <td><span id="radiusOutput">25</span></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- colour selection -->
+            <div class="r12">
+                <!-- add colour button -->
+                <div class="r3">
+                    <button class="r12" onclick="addColour()" >Add Colour</button>
+                </div>
+                <!-- colour list -->
+                <div class="r9" style="height: 200px; overflow-y: scroll;">
+                    <ul id="coloursList" class="r12">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- canvas -->
+        <div class="r8">
+            <canvas></canvas>
+        </div>
+        
+    </body>
+</html>
