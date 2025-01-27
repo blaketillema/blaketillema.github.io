@@ -14,6 +14,24 @@ function removeColour(li){
     update();
 }
 
+function moveColourUp(li){
+    let ul = document.getElementById('coloursList');
+    if(!ul) return;
+    if(li.previousSibling){
+        ul.insertBefore(li, li.previousSibling);
+        update();
+    };
+}
+
+function moveColourDown(li){
+    let ul = document.getElementById('coloursList');
+    if(!ul) return;
+    if(li.nextSibling){
+        ul.insertBefore(li.nextSibling, li);
+        update();
+    }
+}
+
 function addColour(){
     let ul = document.getElementById('coloursList');
     if(!ul) return;
@@ -32,10 +50,12 @@ function addColour(){
 
     let upButton = document.createElement('button');
     upButton.textContent = 'Up';
+    upButton.onclick = () => {moveColourUp(li)};
     li.appendChild(upButton)
 
     let downButton = document.createElement('button');
     downButton.textContent = 'Down';
+    downButton.onclick = () => {moveColourDown(li)};
     li.append(downButton);
 
     ul.appendChild(li);
