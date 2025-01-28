@@ -2,14 +2,15 @@
 <html lang="en">
     <!-- hey hello hii -->
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
         <!-- left ui panel -->
-        <div class="r4">
+        <div>
             <!-- options table -->
-            <div class="r12">
+            <div id="options-div">
                 <table>
                     <tr>
                         <td>Steps</td>
@@ -22,23 +23,19 @@
                         <td><span id="radiusOutput">25</span></td>
                     </tr>
                 </table>
+                <!-- add colour button -->
+                <button onclick="addColour()" >Add Colour</button>
             </div>
             <!-- colour selection -->
-            <div class="r12">
-                <!-- add colour button -->
-                <div class="r3">
-                    <button class="r12" onclick="addColour()" >Add Colour</button>
-                </div>
+            <div id="colours-div">
                 <!-- colour list -->
-                <div class="r9" style="height: 200px; overflow-y: scroll;">
-                    <ul id="coloursList" class="r12">
-                    </ul>
-                </div>
+                <ul id="coloursList">
+                </ul>
             </div>
         </div>
 
         <!-- canvas -->
-        <div class="r8">
+        <div id="canvas-div">
             <canvas></canvas>
         </div>
         

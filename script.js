@@ -10,7 +10,6 @@ function removeColour(li){
     let ul = document.getElementById('coloursList');
     if(!ul) return;
     ul.removeChild(li);
-
     update();
 }
 
@@ -29,7 +28,7 @@ function moveColourDown(li){
     if(li.nextSibling){
         ul.insertBefore(li.nextSibling, li);
         update();
-    }
+    };
 }
 
 function addColour(){
@@ -69,13 +68,8 @@ function getCanvas(){
     return canvasElements[0];
 }
 
-window.onload = function(){
-    let canvas = getCanvas();
-    if(!canvas) return;
-    canvas.width = canvas.parentElement.offsetWidth;
-    canvas.height = canvas.width;
-    update();
-}
+window.onload = () => {update();};
+window.onresize = () => {update();};
 
 function sample(num1, num2, progress){
     return num1 + (num2 - num1) * progress;
@@ -162,6 +156,8 @@ function draw(){
 
     let canvas = getCanvas();
     if(!canvas) return;
+    let dim = Math.min(canvas.parentElement.offsetHeight, canvas.parentElement.offsetWidth);
+    canvas.height = canvas.width = dim;
     let context = canvas.getContext('2d');
     if(!context) return;
     context.clearRect(0, 0, canvas.width, canvas.height);
