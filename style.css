@@ -53,7 +53,7 @@ p {
 
     margin: 0;
     padding: 0;
-    list-style-position: none;
+    list-style: none;
     text-align: center;
     align-content: center;
 
