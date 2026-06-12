@@ -12,6 +12,7 @@ async function getCategories() {
     for(let cat of request.trivia_categories){
         if(selectedCategory === null){
             selectedCategory = cat.id;
+            localStorage.setItem("category", selectedCategory);
         }
         let option = document.createElement("option");
         option.setAttribute("value", cat.id);
