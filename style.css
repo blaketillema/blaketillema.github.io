@@ -1,70 +1,66 @@
-html {
-    margin: auto;
-    padding: 0;
-}
-
 body {
     margin: auto;
-    /* max-width: 1000px; */
-}
-
-#options-div {
-    width: 50vw;
-    max-width: 768px;
-    height: 10vh;
-    margin: auto;
-    display: flex;
-}
-#options-div > table {
-    flex: 2;
-}
-#options-div > button {
-    flex: 1;
-    height: 100%;
-}
-
-#colours-div {
-    height: 20vh;
-    overflow-y: scroll;
-    padding: 5px;
-    background-color: lightgray;
-}
-#colours-div > div > button {
-    margin: auto;
-}
-
-#canvas-div {
-    display: flex;
-    height: 60vw;
-    max-height: 1000px;
-}
-canvas {
-    margin: auto;
-}
-
-ul {
     padding: 0;
-    margin: auto;
-    /* overflow-x: scroll; */
-}
-li {
-    display: flex;
-    list-style-type: none;
-}
-li > button, li > input {
-    flex: 1;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    max-width: 800px;
 }
 
-@media screen and (max-width: 768px) {
-    #options-div {
-        width: 100%;
-        font-size: smaller;
-    }
-    #options-div input[type="range"] {
-        width: 25vw;
-    }
-    #canvas-div {
-        width: 100vw;
-        height: 100vw;
-    }
+p {
+    margin: 0;
+    text-align: center;
+    align-content: center;
+}
+
+#question-section {
+    width: 100%;
+    height: 70%;
+    min-height: 350px;
+}
+
+#controls-section {
+    width: 100%;
+    height: 30%;
+    min-height: 175px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+#category-select {
+    grid-row: 1 / 1;
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+#difficulty {
+    text-transform: capitalize;
+    height: 10%;
+    background-color: beige;
+}
+
+#question {
+    height: 20%;
+    background-color: bisque;
+}
+
+#options {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 0;
+    list-style-position: none;
+    text-align: center;
+    align-content: center;
+
+    background-color: beige;
+}
+
+#answer {
+    height: 20%;
+    background-color: bisque;
 }
